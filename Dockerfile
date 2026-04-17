@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:trixie-slim
 COPY ./setup.sh /app/
 RUN sh -eux /app/setup.sh
 COPY ./entrypoint.sh /app/

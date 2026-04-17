@@ -1,4 +1,4 @@
-# docker-l2tp-ipsec-http-proxy
+# docker-l2tp-proxy
 
 > strongswan + xl2tpd + privoxy
 

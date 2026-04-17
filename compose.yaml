@@ -1,16 +1,17 @@
 services:
   proxy:
-    image: $USER/l2tp-ipsec-http-proxy
+    image: $USER/l2tp-proxy
     build: .
     init: true
     restart: unless-stopped
     cap_add:
-      - SYSLOG
       - NET_ADMIN
+      - SYSLOG
     devices:
       - /dev/ppp
     ports:
-      - 8118:8118/tcp
+      - '127.0.0.1:8118:8118'
+      - '[::]:8118:8118'
     secrets:
       - vpn.params
     environment:

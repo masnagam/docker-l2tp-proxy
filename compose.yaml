@@ -4,6 +4,8 @@ services:
     build: .
     init: true
     restart: unless-stopped
+    # Wait 30s before sending SIGKILL in order to disconnect the IPSec.
+    stop_grace_period: 30s
     cap_add:
       - NET_ADMIN
       - SYSLOG

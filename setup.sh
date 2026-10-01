@@ -21,7 +21,7 @@ apt-get install -y --no-install-recommends rsyslog
 apt-get install -y --no-install-recommends tzdata
 
 # tools for debugging purposes
-apt-get install -y dnsutils iproute2 iputils-ping iputils-tracepath tcpdump
+apt-get install -y curl dnsutils iproute2 iputils-ping iputils-tracepath tcpdump traceroute mtr-tiny
 
 # Cleanup
 apt-get clean

@@ -12,8 +12,7 @@ services:
     devices:
       - /dev/ppp
     ports:
-      - '127.0.0.1:8118:8118'
-      - '[::]:8118:8118'
+      - '8118:8118'
     secrets:
       - vpn.params
     environment:
